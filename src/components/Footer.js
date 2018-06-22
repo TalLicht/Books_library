@@ -21,7 +21,7 @@ class Footer extends Component {
                         <a href="#" className="fa fa-youtube"></a>
                     </div>
                     <div className="col-sm-4">
-                        <img src="../images/books.gif" className="icon"/>
+                        <img src="images/books.gif" className="icon"/>
                     </div>
                 </div>
             </div>

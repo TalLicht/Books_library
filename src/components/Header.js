@@ -13,7 +13,7 @@ class Header extends Component {
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="#"><h1>Books Library</h1></a>
+                        <a className="navbar-brand" href="#"><h1>Online Library</h1></a>
                     </div>
                     <div className="collapse navbar-collapse" id="theNavBar">
                         <ul className="nav navbar-nav navbar-rigth">

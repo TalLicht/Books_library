@@ -4,47 +4,30 @@ import './Book.css';
 class Book extends Component {
     constructor(props) {
         super(props);
+        this.editBook = this.bind.editBook;
         this.state = {
-          error: null,
-          isLoaded: false,
-          books: []
-        };
-      }
-    
-    componentDidMount() {
-    fetch("https://api.example.com/items")
-        .then(res => res.json())
-        .then(
-        (result) => {
-            this.setState({
-            isLoaded: true,
-            books: result
-            });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-            this.setState({
-            isLoaded: true,
-            error
-            });
+            isOpen : false,
         }
-        )
+    }
+
+    editBook(){
+        this.setState({ isOpen: true })
     }
 
     render() {
-        const { error, isLoaded, items } = this.state;
-        if (error) {
-        return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-        return <div>Loading...</div>;
-        } else {
-            return(
-                <div>
-                    {books.map(item => (
-                        key={book.id}>
-                        {book.id} {book.author_name} {book.published_date}
-                    ))}
-                </div>
-            )
+        return(
+            <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 book-root">
+                <div className="cover-img"><img src={ this.props.book.volumeInfo.imageLinks.smallThumbnail }/></div>
+                <h4>{ this.props.book.volumeInfo.title }</h4>
+                <h5>{ this.props.book.volumeInfo.authors }</h5>
+                <h5>{ this.props.book.volumeInfo.publishedDate }</h5>
+                <h6>book id { this.props.book.id }</h6> 
+                <button className="btn btn-default" onClick="editBook">Edit</button>
+                <button className="btn btn-default" onClick="deleteBook">Delete</button>
+            </div>
+
+        )
+    }
+}
+
+export default Book;
