@@ -1,0 +1,20 @@
+#footer{
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #00b33c;
+	color: #fff;
+	padding: 1% 0;
+	font-size: 1.2em;
+	border: 0;
+}
+
+.fa{
+	padding: 15px;
+	font-size: 25px;
+	color: #fff;
+}
+
+.fa:hover{
+	color: #d5d5d5;
+	text-decoration: none;
+}

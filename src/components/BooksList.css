@@ -1,0 +1,33 @@
+#mainTitle{
+    text-align: center;
+}
+#booksTitle{
+	font-family: 'Shrikhand', cursive;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+#addBook{
+	float: right;
+	margin-right: 3%;
+	margin-top: -5%;
+}
+
+#booksTable{
+	text-align: center;
+	table-layout: auto;
+	width: 80%;
+}
+
+th{
+	font-size: 30px;
+	text-align: center;
+}
+
+tbody{
+	font-size: 20px;
+}
+
+tbody img{
+		margin: 5px 0;
+}
